@@ -2,7 +2,7 @@ import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
-import 'package:weather_app/navigation/router.dart';
+import 'package:sole/navigation/router.dart';
 
 @RoutePage()
 class SplashScreen extends StatelessWidget {

@@ -1,7 +1,7 @@
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:weather_app/data/dto/suntime_forecast.dart';
-import 'package:weather_app/data/dto/temperatures_forecast.dart';
+import 'package:sole/data/dto/suntime_forecast.dart';
+import 'package:sole/data/dto/temperatures_forecast.dart';
 
 part 'weekly_forecast.g.dart';
 

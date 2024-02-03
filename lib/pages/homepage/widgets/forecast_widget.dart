@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:weather_app/data/model/daily_forecast.dart';
-import 'package:weather_app/data/model/weather_forecast.dart';
-import 'package:weather_app/resources/colors.dart';
-import 'package:weather_app/resources/image_assets_path.dart';
-import 'package:weather_app/resources/themes.dart';
+import 'package:sole/data/model/daily_forecast.dart';
+import 'package:sole/data/model/weather_forecast.dart';
+import 'package:sole/resources/colors.dart';
+import 'package:sole/resources/image_assets_path.dart';
+import 'package:sole/resources/themes.dart';
 
 import 'daily_forecast_widget.dart';
 import 'hourly_temperatures_graph.dart';

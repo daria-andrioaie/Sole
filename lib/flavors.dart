@@ -1,4 +1,4 @@
-import 'package:weather_app/constants/app_constants.dart';
+import 'package:sole/constants/app_constants.dart';
 
 enum Flavor {
   dev,
@@ -14,11 +14,11 @@ class F {
   static String get title {
     switch (appFlavor) {
       case Flavor.dev:
-        return 'WeatherApp-dev';
+        return 'Sole-dev';
       case Flavor.staging:
-        return 'WeatherApp-staging';
+        return 'Sole-staging';
       case Flavor.production:
-        return 'WeatherApp';
+        return 'Sole';
       default:
         return 'title';
     }

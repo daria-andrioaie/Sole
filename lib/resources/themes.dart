@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:weather_app/constants/app_constants.dart';
+import 'package:sole/constants/app_constants.dart';
 
 class AppThemes {
   static const BorderRadius borderRadius10 =

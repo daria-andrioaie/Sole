@@ -1,10 +1,10 @@
 import 'package:location/location.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:weather_app/data/dto/weekly_forecast.dart';
-import 'package:weather_app/data/model/weather_description.dart';
-import 'package:weather_app/data/model/weather_forecast.dart';
-import 'package:weather_app/di/injection_container.dart';
-import 'package:weather_app/pages/homepage/riverpod/weather_state.dart';
+import 'package:sole/data/dto/weekly_forecast.dart';
+import 'package:sole/data/model/weather_description.dart';
+import 'package:sole/data/model/weather_forecast.dart';
+import 'package:sole/di/injection_container.dart';
+import 'package:sole/pages/homepage/riverpod/weather_state.dart';
 import 'package:geocoding/geocoding.dart' as geocoding;
 
 

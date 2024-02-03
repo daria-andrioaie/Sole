@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:weather_app/pages/splash-screen/splash_screen.dart';
+import 'package:sole/pages/splash-screen/splash_screen.dart';
 
 import '../data/model/daily_forecast.dart';
 import '../pages/dailyForecast/daily_forecast_screen.dart';

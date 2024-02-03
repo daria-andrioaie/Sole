@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/resources/colors.dart';
-import 'package:weather_app/resources/themes.dart';
+import 'package:sole/resources/colors.dart';
+import 'package:sole/resources/themes.dart';
 
 class AnimatedSearchBar extends StatefulWidget {
   const AnimatedSearchBar({super.key, required this.onSubmittedLocality});

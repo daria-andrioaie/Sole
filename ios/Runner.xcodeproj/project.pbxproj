@@ -552,14 +552,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = K5PMBJCZHS;
+				DEVELOPMENT_TEAM = 2CM47V2KMG;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.weatherApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.soleTempo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -625,7 +625,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.weather_app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.sole;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -745,7 +745,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.weather_app.staging;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.sole.staging;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -822,7 +822,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.weather_app.develop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.sole.develop;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -888,7 +888,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.weather_app.develop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.sole.develop;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -965,7 +965,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.weather_app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.sole;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1038,7 +1038,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.weather_app.staging;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.sole.staging;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1160,14 +1160,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = K5PMBJCZHS;
+				DEVELOPMENT_TEAM = 2CM47V2KMG;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.weatherApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.soleTempo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1183,14 +1183,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = K5PMBJCZHS;
+				DEVELOPMENT_TEAM = 2CM47V2KMG;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.weatherApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.soleTempo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1203,6 +1203,7 @@
 			baseConfigurationReference = 73377DA67F534488E8D1ADA0 /* Pods-Runner.debug-dev.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = K5PMBJCZHS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.soleTempo.develop;
 				PRODUCT_NAME = Runner;
 			};
 			name = "Debug-dev";
@@ -1212,6 +1213,7 @@
 			baseConfigurationReference = FAB189F99BAC7243576020AA /* Pods-Runner.profile-dev.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = K5PMBJCZHS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.soleTempo.develop;
 				PRODUCT_NAME = Runner;
 			};
 			name = "Profile-dev";
@@ -1221,6 +1223,7 @@
 			baseConfigurationReference = 3261E2C4ACE2E9E8F1B905FD /* Pods-Runner.release-dev.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = K5PMBJCZHS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.soleTempo.develop;
 				PRODUCT_NAME = Runner;
 			};
 			name = "Release-dev";
@@ -1230,6 +1233,7 @@
 			baseConfigurationReference = DA5D29F23B0B5BCDE0FBB7E1 /* Pods-Runner.debug-staging.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = K5PMBJCZHS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.soleTempo.staging;
 				PRODUCT_NAME = Runner;
 			};
 			name = "Debug-staging";
@@ -1239,6 +1243,7 @@
 			baseConfigurationReference = D23AB96E5713A69813D325E4 /* Pods-Runner.profile-staging.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = K5PMBJCZHS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.soleTempo.staging;
 				PRODUCT_NAME = Runner;
 			};
 			name = "Profile-staging";
@@ -1248,6 +1253,7 @@
 			baseConfigurationReference = F0683B620B19204C56DC81A4 /* Pods-Runner.release-staging.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = K5PMBJCZHS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.soleTempo.staging;
 				PRODUCT_NAME = Runner;
 			};
 			name = "Release-staging";
@@ -1409,7 +1415,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.weather_app.staging;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.sole.staging;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
@@ -1477,7 +1483,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.weather_app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.sole;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
@@ -1545,7 +1551,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.weather_app.develop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.sole.develop;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";

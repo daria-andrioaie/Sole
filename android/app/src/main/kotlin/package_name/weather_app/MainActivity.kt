@@ -1,4 +1,4 @@
-package package_name.weather_app
+package package_name.sole
 
 import io.flutter.embedding.android.FlutterActivity
 

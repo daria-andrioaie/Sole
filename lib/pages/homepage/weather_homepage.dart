@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:weather_app/pages/homepage/riverpod/weather_state_notifier.dart';
-import 'package:weather_app/pages/homepage/widgets/searchbar.dart';
-import 'package:weather_app/pages/homepage/widgets/user_location_widget.dart';
+import 'package:sole/pages/homepage/riverpod/weather_state_notifier.dart';
+import 'package:sole/pages/homepage/widgets/searchbar.dart';
+import 'package:sole/pages/homepage/widgets/user_location_widget.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'widgets/forecast_widget.dart';
 

@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:weather_app/data/dto/api_error_response.dart';
-import 'package:weather_app/data/dto/weekly_forecast.dart';
+import 'package:sole/data/dto/api_error_response.dart';
+import 'package:sole/data/dto/weekly_forecast.dart';
 
 import '../data/network/api_response.dart';
 import '../network/api.dart';

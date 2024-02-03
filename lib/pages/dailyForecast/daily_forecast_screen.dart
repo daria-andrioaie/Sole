@@ -1,7 +1,7 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:weather_app/data/model/daily_forecast.dart';
+import 'package:sole/data/model/daily_forecast.dart';
 
 @RoutePage()
 class DailyForecastScreen extends StatelessWidget {

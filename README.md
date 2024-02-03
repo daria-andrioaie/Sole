@@ -1,4 +1,4 @@
-# weather_app
+# sole
 
 A new Flutter project.
 

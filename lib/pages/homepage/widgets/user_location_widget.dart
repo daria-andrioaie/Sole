@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:weather_app/resources/colors.dart';
+import 'package:sole/resources/colors.dart';
 
 class LocationWidget extends StatelessWidget {
   const LocationWidget({super.key, required this.onPressed});

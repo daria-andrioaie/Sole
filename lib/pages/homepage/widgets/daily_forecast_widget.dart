@@ -3,10 +3,10 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_emoji/flutter_emoji.dart';
 import 'package:intl/intl.dart';
-import 'package:weather_app/data/model/weather_forecast.dart';
-import 'package:weather_app/resources/colors.dart';
-import 'package:weather_app/resources/image_assets_path.dart';
-import 'package:weather_app/resources/themes.dart';
+import 'package:sole/data/model/weather_forecast.dart';
+import 'package:sole/resources/colors.dart';
+import 'package:sole/resources/image_assets_path.dart';
+import 'package:sole/resources/themes.dart';
 
 import '../../../data/model/daily_forecast.dart';
 import '../../../data/model/weather_description.dart';

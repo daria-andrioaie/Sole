@@ -1,4 +1,4 @@
-import 'package:weather_app/data/model/weather_description.dart';
+import 'package:sole/data/model/weather_description.dart';
 
 class DailyForecast {
   DateTime date;

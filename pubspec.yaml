@@ -1,4 +1,4 @@
-name: weather_app
+name: sole
 description: A new Flutter project.
 
 publish_to: 'none' 
@@ -44,6 +44,7 @@ dependencies:
   #location services
   location: ^5.0.3
   geocoding: ^2.1.1
+  rename_app: ^1.3.1
 
 dev_dependencies:
   flutter_test:
@@ -95,25 +96,25 @@ flavorizr:
         name: "WeatherApp-dev"
 
       android:
-        applicationId: "com.example.weather_app.develop"
+        applicationId: "com.example.sole.develop"
 
       ios:
-        bundleId: "com.example.weather_app.develop"
+        bundleId: "com.example.sole.develop"
 
     staging:
       app:
         name: "WeatherApp-staging"
 
       android:
-        applicationId: "com.example.weather_app.staging"
+        applicationId: "com.example.sole.staging"
       ios:
-        bundleId: "com.example.weather_app.staging"
+        bundleId: "com.example.sole.staging"
 
     production:
       app:
         name: "WeatherApp"
 
       android:
-        applicationId: "com.example.weather_app"
+        applicationId: "com.example.sole"
       ios:
-        bundleId: "com.example.weather_app"
+        bundleId: "com.example.sole"

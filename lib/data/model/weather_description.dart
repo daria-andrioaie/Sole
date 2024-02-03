@@ -1,4 +1,4 @@
-import 'package:weather_app/resources/image_assets_path.dart';
+import 'package:sole/resources/image_assets_path.dart';
 
 enum WeatherDescription {
   clearSky,
