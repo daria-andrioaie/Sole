@@ -20,7 +20,7 @@ mixin _$WeatherState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<DailyForecast> dailyForecast) weather,
+    required TResult Function(WeatherForecast forecast) weather,
     required TResult Function(String error) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -28,7 +28,7 @@ mixin _$WeatherState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<DailyForecast> dailyForecast)? weather,
+    TResult? Function(WeatherForecast forecast)? weather,
     TResult? Function(String error)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -36,7 +36,7 @@ mixin _$WeatherState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<DailyForecast> dailyForecast)? weather,
+    TResult Function(WeatherForecast forecast)? weather,
     TResult Function(String error)? error,
     required TResult orElse(),
   }) =>
@@ -126,7 +126,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<DailyForecast> dailyForecast) weather,
+    required TResult Function(WeatherForecast forecast) weather,
     required TResult Function(String error) error,
   }) {
     return initial();
@@ -137,7 +137,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<DailyForecast> dailyForecast)? weather,
+    TResult? Function(WeatherForecast forecast)? weather,
     TResult? Function(String error)? error,
   }) {
     return initial?.call();
@@ -148,7 +148,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<DailyForecast> dailyForecast)? weather,
+    TResult Function(WeatherForecast forecast)? weather,
     TResult Function(String error)? error,
     required TResult orElse(),
   }) {
@@ -240,7 +240,7 @@ class _$LoadingImpl implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<DailyForecast> dailyForecast) weather,
+    required TResult Function(WeatherForecast forecast) weather,
     required TResult Function(String error) error,
   }) {
     return loading();
@@ -251,7 +251,7 @@ class _$LoadingImpl implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<DailyForecast> dailyForecast)? weather,
+    TResult? Function(WeatherForecast forecast)? weather,
     TResult? Function(String error)? error,
   }) {
     return loading?.call();
@@ -262,7 +262,7 @@ class _$LoadingImpl implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<DailyForecast> dailyForecast)? weather,
+    TResult Function(WeatherForecast forecast)? weather,
     TResult Function(String error)? error,
     required TResult orElse(),
   }) {
@@ -320,7 +320,7 @@ abstract class _$$WeatherStateImplCopyWith<$Res> {
           _$WeatherStateImpl value, $Res Function(_$WeatherStateImpl) then) =
       __$$WeatherStateImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<DailyForecast> dailyForecast});
+  $Res call({WeatherForecast forecast});
 }
 
 /// @nodoc
@@ -334,13 +334,13 @@ class __$$WeatherStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? dailyForecast = null,
+    Object? forecast = null,
   }) {
     return _then(_$WeatherStateImpl(
-      null == dailyForecast
-          ? _value._dailyForecast
-          : dailyForecast // ignore: cast_nullable_to_non_nullable
-              as List<DailyForecast>,
+      null == forecast
+          ? _value.forecast
+          : forecast // ignore: cast_nullable_to_non_nullable
+              as WeatherForecast,
     ));
   }
 }
@@ -348,20 +348,14 @@ class __$$WeatherStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$WeatherStateImpl implements _WeatherState {
-  const _$WeatherStateImpl(final List<DailyForecast> dailyForecast)
-      : _dailyForecast = dailyForecast;
+  const _$WeatherStateImpl(this.forecast);
 
-  final List<DailyForecast> _dailyForecast;
   @override
-  List<DailyForecast> get dailyForecast {
-    if (_dailyForecast is EqualUnmodifiableListView) return _dailyForecast;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_dailyForecast);
-  }
+  final WeatherForecast forecast;
 
   @override
   String toString() {
-    return 'WeatherState.weather(dailyForecast: $dailyForecast)';
+    return 'WeatherState.weather(forecast: $forecast)';
   }
 
   @override
@@ -369,13 +363,12 @@ class _$WeatherStateImpl implements _WeatherState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$WeatherStateImpl &&
-            const DeepCollectionEquality()
-                .equals(other._dailyForecast, _dailyForecast));
+            (identical(other.forecast, forecast) ||
+                other.forecast == forecast));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_dailyForecast));
+  int get hashCode => Object.hash(runtimeType, forecast);
 
   @JsonKey(ignore: true)
   @override
@@ -388,10 +381,10 @@ class _$WeatherStateImpl implements _WeatherState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<DailyForecast> dailyForecast) weather,
+    required TResult Function(WeatherForecast forecast) weather,
     required TResult Function(String error) error,
   }) {
-    return weather(dailyForecast);
+    return weather(forecast);
   }
 
   @override
@@ -399,10 +392,10 @@ class _$WeatherStateImpl implements _WeatherState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<DailyForecast> dailyForecast)? weather,
+    TResult? Function(WeatherForecast forecast)? weather,
     TResult? Function(String error)? error,
   }) {
-    return weather?.call(dailyForecast);
+    return weather?.call(forecast);
   }
 
   @override
@@ -410,12 +403,12 @@ class _$WeatherStateImpl implements _WeatherState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<DailyForecast> dailyForecast)? weather,
+    TResult Function(WeatherForecast forecast)? weather,
     TResult Function(String error)? error,
     required TResult orElse(),
   }) {
     if (weather != null) {
-      return weather(dailyForecast);
+      return weather(forecast);
     }
     return orElse();
   }
@@ -459,10 +452,10 @@ class _$WeatherStateImpl implements _WeatherState {
 }
 
 abstract class _WeatherState implements WeatherState {
-  const factory _WeatherState(final List<DailyForecast> dailyForecast) =
+  const factory _WeatherState(final WeatherForecast forecast) =
       _$WeatherStateImpl;
 
-  List<DailyForecast> get dailyForecast;
+  WeatherForecast get forecast;
   @JsonKey(ignore: true)
   _$$WeatherStateImplCopyWith<_$WeatherStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -534,7 +527,7 @@ class _$ErrorImpl implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(List<DailyForecast> dailyForecast) weather,
+    required TResult Function(WeatherForecast forecast) weather,
     required TResult Function(String error) error,
   }) {
     return error(this.error);
@@ -545,7 +538,7 @@ class _$ErrorImpl implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(List<DailyForecast> dailyForecast)? weather,
+    TResult? Function(WeatherForecast forecast)? weather,
     TResult? Function(String error)? error,
   }) {
     return error?.call(this.error);
@@ -556,7 +549,7 @@ class _$ErrorImpl implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(List<DailyForecast> dailyForecast)? weather,
+    TResult Function(WeatherForecast forecast)? weather,
     TResult Function(String error)? error,
     required TResult orElse(),
   }) {

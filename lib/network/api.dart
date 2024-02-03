@@ -10,7 +10,7 @@ abstract class Api {
   factory Api(Dio dio) = _Api;
 
   @GET('/forecast')
-  Future<WeeklyForecast> getForecast(
+  Future<WeeklyForecastResponse> getForecast(
     @Query('latitude') double latitude,
     @Query('longitude') double longitude,
     @Query('hourly') String hourly,

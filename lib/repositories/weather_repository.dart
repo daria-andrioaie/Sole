@@ -12,9 +12,9 @@ class WeatherRepository {
 
   WeatherRepository({required this.api});
 
-  Future<ApiResponse<WeeklyForecast>> getForecast() async {
+  Future<ApiResponse<WeeklyForecastResponse>> getForecast(double latitude, double longitude) async {
     try {
-      final weeklyForecast = await api.getForecast(52.52, 13.41, 'temperature_2m', 'sunset,sunrise,weathercode', 'GMT');
+      final weeklyForecast = await api.getForecast(latitude, longitude, 'temperature_2m,apparent_temperature', 'sunset,sunrise,weathercode', 'GMT');
       return ApiResponse.completed(weeklyForecast);
     } on DioException catch(e) {
       if(e.error is SocketException) {

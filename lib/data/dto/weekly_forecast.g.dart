@@ -6,13 +6,15 @@ part of 'weekly_forecast.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-WeeklyForecast _$WeeklyForecastFromJson(Map<String, dynamic> json) =>
-    WeeklyForecast(
+WeeklyForecastResponse _$WeeklyForecastResponseFromJson(
+        Map<String, dynamic> json) =>
+    WeeklyForecastResponse(
       TemperaturesForecast.fromJson(json['hourly'] as Map<String, dynamic>),
       SuntimeForecast.fromJson(json['daily'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$WeeklyForecastToJson(WeeklyForecast instance) =>
+Map<String, dynamic> _$WeeklyForecastResponseToJson(
+        WeeklyForecastResponse instance) =>
     <String, dynamic>{
       'hourly': instance.hourlyTemperatures,
       'daily': instance.suntimeForecast,

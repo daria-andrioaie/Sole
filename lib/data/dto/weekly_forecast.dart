@@ -6,13 +6,13 @@ import 'package:weather_app/data/dto/temperatures_forecast.dart';
 part 'weekly_forecast.g.dart';
 
 @JsonSerializable()
-class WeeklyForecast {
+class WeeklyForecastResponse {
   @JsonKey(name: "hourly")
   TemperaturesForecast hourlyTemperatures;
 
   @JsonKey(name: "daily")
   SuntimeForecast suntimeForecast;
-  WeeklyForecast(this.hourlyTemperatures, this.suntimeForecast);
+  WeeklyForecastResponse(this.hourlyTemperatures, this.suntimeForecast);
 
-  factory WeeklyForecast.fromJson(Map<String, dynamic> json) => _$WeeklyForecastFromJson(json);
+  factory WeeklyForecastResponse.fromJson(Map<String, dynamic> json) => _$WeeklyForecastResponseFromJson(json);
 }

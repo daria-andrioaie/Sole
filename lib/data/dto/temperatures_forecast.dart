@@ -9,7 +9,10 @@ class TemperaturesForecast {
   @JsonKey(name: "temperature_2m")
   List<double> temperatures;
 
-  TemperaturesForecast(this.hours, this.temperatures);
+  @JsonKey(name: "apparent_temperature")
+  List<double> apparentTemperatures;
+
+  TemperaturesForecast(this.hours, this.temperatures, this.apparentTemperatures);
 
   factory TemperaturesForecast.fromJson(Map<String, dynamic> json) => _$TemperaturesForecastFromJson(json);
 

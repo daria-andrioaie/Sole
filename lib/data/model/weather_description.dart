@@ -1,3 +1,5 @@
+import 'package:weather_app/resources/image_assets_path.dart';
+
 enum WeatherDescription {
   clearSky,
   mainlyClear, partlyCloudy, overcast,
@@ -80,63 +82,107 @@ enum WeatherDescription {
   String toString() {
     switch (this) {
       case WeatherDescription.clearSky:
-        return "clear sky";
+        return "Clear Sky";
       case WeatherDescription.mainlyClear:
-        return "mainly clear sky";
+        return "Mainly Clear Sky";
       case WeatherDescription.partlyCloudy:
-        return "partly cloudy";
+        return "Partly Cloudy";
       case WeatherDescription.overcast:
-        return "cloudy";
+        return "Cloudy";
       case WeatherDescription.fog:
-        return "foggy";
+        return "Foggy";
       case WeatherDescription.depositingRimeFog:
-        return "rime fog";
+        return "Rime Fog";
       case WeatherDescription.lightDrizzle:
-        return "light drizzle";
+        return "Light Drizzle";
       case WeatherDescription.moderateDrizzle:
-        return "moderate drizzle";
+        return "Moderate Drizzle";
       case WeatherDescription.denseDrizzle:
-        return "dense drizzle";
+        return "Dense Drizzle";
       case WeatherDescription.lightFreezingRain:
-        return "light freezing drizzle";
+        return "Light Freezing Drizzle";
       case WeatherDescription.denseFreezingDrizzle:
-        return "dense freezing drizzle";
+        return "Dense Freezing Drizzle";
       case WeatherDescription.slightRain:
-        return "slight rain";
+        return "Slight Rain";
       case WeatherDescription.moderateRain:
-        return "moderate rain";
+        return "Moderate Rain";
       case WeatherDescription.heavyRain:
-        return "heavy rain";
+        return "Heavy Rain";
       case WeatherDescription.lightFreezingRain:
-        return "light freezing rain";
+        return "Light Freezing Rain";
       case WeatherDescription.heavyFreezingRain:
-        return "heavy freezing rain";
+        return "Heavy Freezing Rain";
       case WeatherDescription.slightSnowFall:
-        return "slight snowfall";
+        return "Slight Snowfall";
       case WeatherDescription.moderateSnowFall:
-        return "moderate snowfall";
+        return "Moderate Snowfall";
       case WeatherDescription.heavySnowFall:
-        return "heavy snowfall";
+        return "Heavy Snowfall";
       case WeatherDescription.snowGrains:
-        return "snow grains";
+        return "Snow Grains";
       case WeatherDescription.slightRainShowers:
-        return "slight rain showers";
+        return "Slight Rain Showers";
       case WeatherDescription.moderateRainShowers:
-        return "moderate rain showers";
+        return "Moderate Rain Showers";
       case WeatherDescription.violentRainShowers:
-        return "violent rain showers";
+        return "Violent Rain Showers";
       case WeatherDescription.slightSnowShowers:
-        return "slight snow showers";
+        return "Slight Snow Showers";
       case WeatherDescription.heavySnowShowers:
-        return "heavy snow showers";
+        return "Heavy Snow Showers";
       case WeatherDescription.slightThunderstorm:
-        return "slight thunderstorm";
+        return "Slight Thunderstorm";
       case WeatherDescription.slightHailThunderstorm:
-        return "hail thunderstorm";
+        return "Hail Thunderstorm";
       case WeatherDescription.heavyHailThunderstorm:
-        return "heavy hail thunderstorm";
+        return "Heavy Hail Thunderstorm";
       default:
-        return "clear sky";
+        return "Clear Sky";
+    }
+  }
+
+  String imageAssetPath() {
+    switch (this) {
+      case WeatherDescription.clearSky:
+        return ImageAssetsPath.burningSun;
+      case WeatherDescription.mainlyClear:
+        return ImageAssetsPath.burningSun;
+      case WeatherDescription.partlyCloudy:
+        return ImageAssetsPath.rainyCloud;
+      case WeatherDescription.overcast:
+        return ImageAssetsPath.rainyCloud2;
+      case WeatherDescription.fog:
+        return ImageAssetsPath.fog;
+      case WeatherDescription.depositingRimeFog:
+        return ImageAssetsPath.fog;
+      case WeatherDescription.lightDrizzle:
+      case WeatherDescription.moderateDrizzle:
+      case WeatherDescription.denseDrizzle:
+      case WeatherDescription.lightFreezingRain:
+      case WeatherDescription.denseFreezingDrizzle:
+      case WeatherDescription.slightRain:
+      case WeatherDescription.moderateRain:
+      case WeatherDescription.heavyRain:
+      case WeatherDescription.heavyFreezingRain:
+      case WeatherDescription.slightRainShowers:
+      case WeatherDescription.moderateRainShowers:
+      case WeatherDescription.violentRainShowers:
+        return ImageAssetsPath.waterdrops;
+      case WeatherDescription.slightSnowFall:
+      case WeatherDescription.moderateSnowFall:
+      case WeatherDescription.heavySnowFall:
+      return ImageAssetsPath.snowflake;
+      case WeatherDescription.snowGrains:
+      case WeatherDescription.slightSnowShowers:
+      case WeatherDescription.heavySnowShowers:
+        return ImageAssetsPath.snowflakes;
+      case WeatherDescription.slightThunderstorm:
+      case WeatherDescription.slightHailThunderstorm:
+      case WeatherDescription.heavyHailThunderstorm:
+        return ImageAssetsPath.lightening;
+      default:
+        return ImageAssetsPath.burningSun;
     }
   }
 }

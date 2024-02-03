@@ -8,5 +8,8 @@ class DailyForecast {
   WeatherDescription description;
   List<double> hourlyTemperatures;
 
-  DailyForecast(this.date, this.sunrise, this.sunset, this.description, this.hourlyTemperatures);
+  List<double> apparentTemperatures;
+
+
+  DailyForecast(this.date, this.sunrise, this.sunset, this.description, this.hourlyTemperatures, this.apparentTemperatures);
 }

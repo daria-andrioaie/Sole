@@ -19,7 +19,7 @@ class _Api implements Api {
   String? baseUrl;
 
   @override
-  Future<WeeklyForecast> getForecast(
+  Future<WeeklyForecastResponse> getForecast(
     double latitude,
     double longitude,
     String hourly,
@@ -36,8 +36,8 @@ class _Api implements Api {
     };
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<WeeklyForecast>(Options(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<WeeklyForecastResponse>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -53,7 +53,7 @@ class _Api implements Api {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = WeeklyForecast.fromJson(_result.data!);
+    final value = WeeklyForecastResponse.fromJson(_result.data!);
     return value;
   }
 

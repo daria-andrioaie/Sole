@@ -13,6 +13,9 @@ TemperaturesForecast _$TemperaturesForecastFromJson(
       (json['temperature_2m'] as List<dynamic>)
           .map((e) => (e as num).toDouble())
           .toList(),
+      (json['apparent_temperature'] as List<dynamic>)
+          .map((e) => (e as num).toDouble())
+          .toList(),
     );
 
 Map<String, dynamic> _$TemperaturesForecastToJson(
@@ -20,4 +23,5 @@ Map<String, dynamic> _$TemperaturesForecastToJson(
     <String, dynamic>{
       'time': instance.hours,
       'temperature_2m': instance.temperatures,
+      'apparent_temperature': instance.apparentTemperatures,
     };
