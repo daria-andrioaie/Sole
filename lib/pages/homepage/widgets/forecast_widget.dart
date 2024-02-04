@@ -10,7 +10,10 @@ import 'daily_forecast_widget.dart';
 import 'hourly_temperatures_graph.dart';
 
 class Forecast extends StatelessWidget {
-  const Forecast({super.key, required this.forecast});
+  const Forecast({
+    super.key,
+    required this.forecast,
+  });
 
   final WeatherForecast forecast;
   @override
@@ -21,8 +24,7 @@ class Forecast extends StatelessWidget {
       children: [
         Text(
           forecast.locality,
-          style:
-              AppThemes.outfit.titleLarge?.apply(color: AppColors.amethyst),
+          style: AppThemes.outfit.titleLarge?.apply(color: AppColors.amethyst),
         ),
         const SizedBox(height: 8),
         Text(
@@ -33,7 +35,7 @@ class Forecast extends StatelessWidget {
           "Feels like ${getApparentTemperature()}°",
           style: AppThemes.outfit.labelMedium?.apply(color: AppColors.lila),
         ),
-
+        const SizedBox(height: 16,),
         Expanded(
           child: SingleChildScrollView(
             child: Column(
@@ -41,7 +43,8 @@ class Forecast extends StatelessWidget {
                 HourlyTemperatureGraph(
                   dailyForecast: forecast.dailyForecasts.first,
                 ),
-                CurrentTemperatureWidget(forecast: forecast.dailyForecasts.first),
+                CurrentTemperatureWidget(
+                    forecast: forecast.dailyForecasts.first),
                 const SizedBox(
                   height: 20,
                 ),
@@ -59,8 +62,6 @@ class Forecast extends StatelessWidget {
     return forecast.dailyForecasts.first.apparentTemperatures[now.hour].round();
   }
 }
-
-
 
 class CurrentTemperatureWidget extends StatelessWidget {
   const CurrentTemperatureWidget({super.key, required this.forecast});
@@ -103,9 +104,9 @@ class UpcomingDaysWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children:
-        upcomingForecast.map((e) => DailyForecastWidget(dailyForecast: e)).toList(),
+      children: upcomingForecast
+          .map((e) => DailyForecastWidget(dailyForecast: e))
+          .toList(),
     );
   }
 }
-

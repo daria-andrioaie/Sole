@@ -3,6 +3,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:sole/navigation/router.dart';
+import 'package:sole/resources/image_assets_path.dart';
+import 'package:sole/resources/themes.dart';
 
 @RoutePage()
 class SplashScreen extends StatelessWidget {
@@ -16,14 +18,30 @@ class SplashScreen extends StatelessWidget {
     return AnimatedSplashScreen(
       duration: 3000,
       animationDuration: const Duration(seconds: 2),
-      splash: const Icon(
-        Icons.sunny,
-        color: Colors.orangeAccent,
-        size: 100,
+      splash: Image.asset(
+        ImageAssetsPath.sunLogo,
+        scale: 0.5,
       ),
       nextScreen: const SizedBox.shrink(),
-      backgroundColor: const Color.fromRGBO(49, 193, 245, 1),
+      backgroundColor: const Color.fromRGBO(2, 119, 170, 1),
       splashTransition: SplashTransition.scaleTransition,
+    );
+  }
+
+  Widget splashContent() {
+    return Column(
+      children: [
+        Image.asset(
+          ImageAssetsPath.sunLogo,
+          scale: 1.5,
+        ),
+        const SizedBox(height: 30,),
+        Text(
+          'sole',
+          style: AppThemes.outfit.titleLarge
+              ?.apply(color: const Color.fromRGBO(255, 210, 54, 1)),
+        ),
+      ],
     );
   }
 }

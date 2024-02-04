@@ -19,7 +19,19 @@ class Assets {
   static const String fontsOutfitRegular = 'assets/fonts/Outfit-Regular.ttf';
   static const String fontsOutfitSemiBold = 'assets/fonts/Outfit-SemiBold.ttf';
   static const String fontsOutfitThin = 'assets/fonts/Outfit-Thin.ttf';
+  static const String iconsIconLauncher = 'assets/icons/icon_launcher.png';
+  static const String iconsSunLogo = 'assets/icons/sun-logo.png';
+  static const String imagesBurningSun = 'assets/images/burning-sun.png';
+  static const String imagesFog = 'assets/images/fog.png';
+  static const String imagesLightening = 'assets/images/lightening.png';
+  static const String imagesPartlyCloudy = 'assets/images/partly-cloudy.png';
+  static const String imagesRainyCloud = 'assets/images/rainy-cloud.png';
+  static const String imagesRainyCloud2 = 'assets/images/rainy-cloud-2.png';
+  static const String imagesSnowflake = 'assets/images/snowflake.png';
+  static const String imagesSnowflakes = 'assets/images/snowflakes.png';
   static const String imagesSunrise = 'assets/images/sunrise.png';
   static const String imagesSunset = 'assets/images/sunset.png';
+  static const String imagesWaterdrops = 'assets/images/waterdrops.png';
+  static const String imagesWaterdrops2 = 'assets/images/waterdrops-2.png';
 
 }

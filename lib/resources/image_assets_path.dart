@@ -22,5 +22,6 @@ class ImageAssetsPath {
 
   static const String fog = 'assets/images/fog.png';
   static const String burningSun = 'assets/images/burning-sun.png';
+  static const String sunLogo = 'assets/icons/sun-logo.png';
 
 }
