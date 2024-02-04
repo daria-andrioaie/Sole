@@ -25,9 +25,9 @@ class _AnimatedSearchBarState extends State<AnimatedSearchBar> {
         duration: const Duration(milliseconds: 200),
         width: _expanded ? MediaQuery.of(context).size.width : 60,
         height: 60,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           borderRadius: AppThemes.borderRadius30,
-          color: _expanded ? AppColors.lightBlue : Colors.transparent,
+          color: Colors.transparent,
         ),
         child: Row(
           children: [
@@ -41,7 +41,7 @@ class _AnimatedSearchBarState extends State<AnimatedSearchBar> {
             Expanded(
                 child: Container(child: _expanded ? TextField(
                   decoration: const InputDecoration(
-                    hintText: 'Search for another location', border: InputBorder.none),
+                    hintText: 'Another location'),
                   onSubmitted: (String locality) => widget.onSubmittedLocality(locality),
                   ) : null,
                 )),
