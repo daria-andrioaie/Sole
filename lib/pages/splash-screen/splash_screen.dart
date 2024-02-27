@@ -16,7 +16,7 @@ class SplashScreen extends StatelessWidget {
       AutoRouter.of(context).replace(const WeatherHomeRoute());
     });
     return AnimatedSplashScreen(
-      duration: 3000,
+      duration: 4000,
       animationDuration: const Duration(seconds: 2),
       splash: Image.asset(
         ImageAssetsPath.sunLogo,

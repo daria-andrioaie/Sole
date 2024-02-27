@@ -41,7 +41,8 @@ class Forecast extends StatelessWidget {
             child: Column(
               children: [
                 HourlyTemperatureGraph(
-                  dailyForecast: forecast.dailyForecasts.first,
+                  todayForecast: forecast.dailyForecasts.first,
+                  tomorrowForecast: forecast.dailyForecasts.elementAt(1),
                 ),
                 CurrentTemperatureWidget(
                     forecast: forecast.dailyForecasts.first),

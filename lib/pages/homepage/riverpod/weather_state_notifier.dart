@@ -7,7 +7,6 @@ import 'package:sole/di/injection_container.dart';
 import 'package:sole/pages/homepage/riverpod/weather_state.dart';
 import 'package:geocoding/geocoding.dart' as geocoding;
 
-
 import '../../../data/model/daily_forecast.dart';
 import '../../../resources/strings.dart';
 
@@ -16,7 +15,7 @@ part 'weather_state_notifier.g.dart';
 class Coordinates {
   double latitude;
   double longitude;
-  
+
   Coordinates(this.latitude, this.longitude);
 }
 
@@ -30,19 +29,22 @@ class WeatherStateNotifier extends _$WeatherStateNotifier {
 
     final repository = ref.read(weatherRepositoryProvider);
 
-      final response = await repository.getForecast(_currentLocation.latitude, _currentLocation.longitude);
+    final response = await repository.getForecast(
+        _currentLocation.latitude, _currentLocation.longitude);
 
-      if(response.isSuccessful) {
-        var locality = await getLocality(_currentLocation.latitude, _currentLocation.longitude);
-        var weatherForecast = WeatherForecast(_convertWeeklyForecastResponse(response.data), locality);
-        state = WeatherState.weather(weatherForecast);
+    if (response.isSuccessful) {
+      var locality = await getLocality(
+          _currentLocation.latitude, _currentLocation.longitude);
+      var weatherForecast = WeatherForecast(
+          _convertWeeklyForecastResponse(response.data), locality);
+      state = WeatherState.weather(weatherForecast);
+    } else {
+      if (response.isNoNetworkError) {
+        state = const WeatherState.error(AppStrings.networkError);
       } else {
-        if(response.isNoNetworkError) {
-          state = const WeatherState.error(AppStrings.networkError);
-        } else {
-          state = WeatherState.error(response.errorResponse.reason);
-        }
+        state = WeatherState.error(response.errorResponse.reason);
       }
+    }
   }
 
   void changeLocality(String locality) {
@@ -75,50 +77,66 @@ class WeatherStateNotifier extends _$WeatherStateNotifier {
       }
     }
     LocationData locationData = await location.getLocation();
-    if(locationData.latitude != null && locationData.longitude != null) {
-      _currentLocation = Coordinates(locationData.latitude!, locationData.longitude!);
+    if (locationData.latitude != null && locationData.longitude != null) {
+      _currentLocation =
+          Coordinates(locationData.latitude!, locationData.longitude!);
       getWeather();
     }
   }
 
   Future<String> getLocality(double latitude, double longitude) async {
-    List<geocoding.Placemark> placemarks = await geocoding.placemarkFromCoordinates(latitude, longitude);
+    List<geocoding.Placemark> placemarks =
+        await geocoding.placemarkFromCoordinates(latitude, longitude);
 
     return placemarks.first.locality ?? "";
   }
-  List<DailyForecast> _convertWeeklyForecastResponse(WeeklyForecastResponse forecastResponse) {
+
+  List<DailyForecast> _convertWeeklyForecastResponse(
+      WeeklyForecastResponse forecastResponse) {
     List<DailyForecast> dailyForecasts = [];
 
-    for(var dayIndex = 0; dayIndex < forecastResponse.suntimeForecast.dates.length; dayIndex++) {
+    for (var dayIndex = 0;
+        dayIndex < forecastResponse.suntimeForecast.dates.length;
+        dayIndex++) {
       // date
       final dateString = forecastResponse.suntimeForecast.dates[dayIndex];
       final date = DateTime.parse(dateString);
 
       // sunrise
-      final sunriseString = forecastResponse.suntimeForecast.sunriseTimes[dayIndex];
+      final sunriseString =
+          forecastResponse.suntimeForecast.sunriseTimes[dayIndex];
       final sunrise = DateTime.parse(sunriseString);
 
       // sunset
-      final sunsetString = forecastResponse.suntimeForecast.sunsetTimes[dayIndex];
+      final sunsetString =
+          forecastResponse.suntimeForecast.sunsetTimes[dayIndex];
       final sunset = DateTime.parse(sunsetString);
 
-      // hourly temperatures
+      // temperatures
       List<double> hourlyTemperatures = [];
-
-      for(var hourIndex = 0; hourIndex < 24; hourIndex++) {
-        final temperatureIndex = dayIndex * 24 + hourIndex;
-        hourlyTemperatures.add(forecastResponse.hourlyTemperatures.temperatures[temperatureIndex]);
-      }
-
-      // apparent temperatures
       List<double> apparentTemperatures = [];
+      List<DateTime> hours = [];
 
-      for(var hourIndex = 0; hourIndex < 24; hourIndex++) {
+      for (var hourIndex = 0; hourIndex < 24; hourIndex++) {
         final temperatureIndex = dayIndex * 24 + hourIndex;
-        apparentTemperatures.add(forecastResponse.hourlyTemperatures.apparentTemperatures[temperatureIndex]);
+        hourlyTemperatures.add(
+            forecastResponse.hourlyTemperatures.temperatures[temperatureIndex]);
+        apparentTemperatures.add(forecastResponse
+            .hourlyTemperatures.apparentTemperatures[temperatureIndex]);
+        hours.add(DateTime.parse(
+            forecastResponse.hourlyTemperatures.hours[temperatureIndex]));
       }
 
-      final dailyForecast = DailyForecast(date, sunrise, sunset, WeatherDescription.fromIntCode(forecastResponse.suntimeForecast.weatherCodes[dayIndex]), hourlyTemperatures, apparentTemperatures);
+      final dailyForecast = DailyForecast(
+        date,
+        sunrise,
+        sunset,
+        WeatherDescription.fromIntCode(
+            forecastResponse.suntimeForecast.weatherCodes[dayIndex]),
+        hourlyTemperatures,
+        apparentTemperatures,
+        hours,
+      );
       dailyForecasts.add(dailyForecast);
     }
     return dailyForecasts;

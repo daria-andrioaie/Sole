@@ -33,6 +33,7 @@ dependencies:
   #models
   freezed: ^2.4.5
   freezed_annotation: ^2.4.1
+  pair: ^0.1.2
 
   #state management
   flutter_riverpod: ^2.4.4
